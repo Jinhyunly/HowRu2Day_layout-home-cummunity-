@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HowAuToday</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<body>
+    <div class="section">
+        <div id="header" class="container">
+            <div id="displayname">
+                <%= username %>
+            </div>
+            <div id="displayCalender">
+                <div id="c1" class="displayCalender_view">
+                   <img src="icon/drop.png" alt="" style="height:10vh; width:8vh; border-radius: 50%;"> 
+                    생리예정일
+                </div>
+                <div id="c2" class="displayCalender_view">
+                    <img src="icon/flower.png" alt="" style="height:10vh; width:8vh; border-radius: 50% "> 
+                    배란예정일
+                </div>
+                <div id="c3" class="displayCalender_view">
+                    <img src="icon/cells.png" alt="" style="height:10vh; width:8vh; border-radius: 50% "> 
+                    가임기시작
+                </div>
+            </div>
+            
+            <div id="displayDate">
+                <h3 style="margin: 0; padding:0">04.11. 수</h3>
+                <div id="displayDate_content">2일 지났습니다.</div>
+            </div>
+            <div id="displayDate_info">
+                최근생리일: 2018.03.14 오늘의 임신확률 낮은편 <br>
+                최근 평균 주기 28일
+            </div>
+        </div>
+    </div>
+    <form method="post" name="dataForm">
+        <div class="section">
+            <div id ="nav" class="container">
+                <div id="calender" class="nav_centent">
+                    <img src="icon/calendar.png" alt="" style="height:8vh; width:8vh; "/> 
+                    캘린더
+                </div>
+                <div id="cummunity" onclick="cummunity()" class="nav_centent">
+                    <img src="icon/community.png"  alt="" style="height:10vh; width:8vh;"/>
+                    커뮤니티
+                </div>
+                <div id="hospital" class="nav_centent">
+                    <img src="icon/location.png" alt="" style="height:10vh; width:8vh; "/>
+                    병원찾기
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="section">
+        <div id="community_info" class="container">
+            커뮤니티정보   
+        </div>
+    </div>
+    <div class="section">
+        <div id="advertising" class="container">
+                광고글
+        </div>
+    </div>
+    <div class="section">
+        <div id="recommend" class="container">
+            추천음식등등
+        </div>
+    </div>
+</body>
+<script>
+    function cummunity(){
+         document.dataForm.action="/cummunity"
+         document.dataForm.submit()
+    }
+</script>
+</html>
